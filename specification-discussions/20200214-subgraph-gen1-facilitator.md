@@ -23,6 +23,9 @@ Subgraph will be responsible for indexing and querying data from blockchains. It
 ## Tasks
 1. Create new repoository mosaic-subgraph
 
+1. While deploying subgraph, unique subgraph name needs to be provided for deployment. The standard format followed is
+   `<prefix>/<postfix>`. Below is the proposed subgraph name format: `mosaic/{origin|aux}-erc20gateway`.
+
 1.  Define all the entities in schema.graphql
     - DeclaredDepositIntent
       - id
@@ -68,7 +71,7 @@ Subgraph will be responsible for indexing and querying data from blockchains. It
       - id
       - proven block number
       - storage root
-      - gateway address 
+      - gateway address
       - block number
       - block hash
       - contract address
@@ -82,23 +85,23 @@ Subgraph will be responsible for indexing and querying data from blockchains. It
       - contract address
       - updated time stamp (uts)
 
-1. Define handlers 
+1. Define handlers
     - in mapping for ERC20Gateway
-      - DeclaredDepositIntent, 
+      - DeclaredDepositIntent,
       - ConfirmedWithdrawIntent
       - ProvenGateway
     - in mapping for ERC20Cogateway
       - ConfirmedDepositIntent
       - DeclaredWithdrawIntent
-      - CreatedUtilityToken, 
+      - CreatedUtilityToken,
       - ProvenGateway
     - in mapping for Anchor.
       - StateRootAvailable
     - Add custom fields for entities in ERC20GatewaySchema and ERC20CogatewaySchema, AnchorSchema.
     - Ref: (https://github.com/mosaicdao/mosaic-chains/blob/develop/graph/origin/src/EIP20GatewayMapping.ts#L28)
 
-1. Add 
-    - ABIs of 
+1. Add
+    - ABIs of
       - ERC20Gateway contract
       - ERC20Cogateway contract
       - Anchor contract
