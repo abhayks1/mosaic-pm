@@ -88,15 +88,15 @@ Subgraph will be responsible for indexing and querying data from blockchains. It
 
 1. Define handlers
     - in mapping for ERC20Gateway
-      - DeclaredDepositIntent,
+      - DeclaredDepositIntent
       - ConfirmedWithdrawIntent
       - ProvenGateway
     - in mapping for ERC20Cogateway
       - ConfirmedDepositIntent
       - DeclaredWithdrawIntent
-      - CreatedUtilityToken,
+      - CreatedUtilityToken
       - ProvenGateway
-    - in mapping for Anchor.
+    - in mapping for Anchor
       - StateRootAvailable
     - Add custom fields for entities in ERC20GatewaySchema and ERC20CogatewaySchema, AnchorSchema.
     - Ref: (https://github.com/mosaicdao/mosaic-chains/blob/develop/graph/origin/src/EIP20GatewayMapping.ts#L28)
