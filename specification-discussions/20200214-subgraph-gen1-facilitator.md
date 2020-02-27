@@ -21,10 +21,11 @@ Subgraph will be responsible for indexing and querying data from blockchains. It
 1. As a user of subgraph, I should be able to deploy subgraph for auxiliary.
 
 ## Tasks
-1. Create new repoository mosaic-subgraph
+1. Create new repository mosaic-subgraph.
 
 1. While deploying subgraph, unique subgraph name needs to be provided for deployment. The standard format followed is
    `<prefix>/<postfix>`. Below is the proposed subgraph name format: `mosaic/{origin|aux}-erc20gateway`.
+   e.g. mosaic/origin-erc20gateway, mosaic/aux-erc20gateway
 
 1.  Define all the entities in schema.graphql
     - DeclaredDepositIntent
